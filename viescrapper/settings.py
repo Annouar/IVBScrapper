@@ -68,6 +68,15 @@ ROBOTSTXT_OBEY = True
 #    'viescrapper.pipelines.SomePipeline': 300,
 #}
 
+ITEM_PIPELINES = {
+    'viescrapper.pipelines.MongoDBPipeline' : 300,
+}
+
+MONGODB_SERVER = "localhost"
+MONGODB_PORT = 27017
+MONGODB_DB = "vie"
+MONGODB_COLLECTION = "civiweb"
+
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html
 #AUTOTHROTTLE_ENABLED = True
